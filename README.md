@@ -29,3 +29,57 @@ A Flutter-based currency converter application with Firebase authentication, liv
 3. How to Run
 
       flutter run
+
+4. Architecture Diagram
+
++-------------------+
+|   Presentation    |
+|   (UI Screens)    |
++---------+---------+
+          |
+          v
++-------------------+
+|       BLoC        |
+|  (State Mgmt)     |
++---------+---------+
+          |
+          v
++-------------------+
+| Repository Layer  |
+|       (API)       |
++---------+---------+
+          |
+          v
++-------------------+
+|    Data Sources   |
+|        API        |
++-------------------+
+
+
+5. Folder layout
+
+   lib/
+├─ main.dart
+├─ firebase_options.dart
+├─ splash_screen/
+│  └─ splash_screen/
+├─ theme/
+|  └─ themedata.dart
+├─ trend_chart/
+│  ├─ trend_bloc.dart
+|  ├─ trend_event.dart
+│  ├─ trend_state.dart
+│  └─ trend_ui.dart
+├─ firebase_auth/
+│  ├─ auth_bloc/
+|  ├─ auth_repository/
+│  ├─ sign_in/
+│  └─ sign_up/
+├─ currency/
+│  ├─ bloc/
+│  ├─ model_page/
+│  ├─ data/
+│  └─ ui/
+└─ home_page/
+   └─ home_page.dart
+
